@@ -4,6 +4,8 @@
 
 #include "unity.h"
 #include "../src/DumbExample.h"
+#include "test_temperature_converter.h"
+
 
 void test_AverageThreeBytes_should_AverageMidRangeValues(void)
 {
@@ -24,5 +26,13 @@ int main(void)
     UNITY_BEGIN();
     RUN_TEST(test_AverageThreeBytes_should_AverageMidRangeValues);
     RUN_TEST(test_AverageThreeBytes_should_AverageHighValues);
+
+    RUN_TEST(test_celsius_to_fahrenheit_0C_return_32F);
+    RUN_TEST(test_celsius_to_fahrenheit_10C_return_50F);
+    RUN_TEST(test_celsius_to_fahrenheit_20C_return_68F);
+
+    RUN_TEST(test_celsius_to_kelvin_0C_return_273K);
+    RUN_TEST(test_celsius_to_kelvin_10C_return_283K);
+    RUN_TEST(test_celsius_to_kelvin_20C_return_293K);
     return UNITY_END();
 }
