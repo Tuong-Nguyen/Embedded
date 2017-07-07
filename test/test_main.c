@@ -3,8 +3,10 @@
 //
 
 #include "unity.h"
+#include "unity_fixture.h"
 #include "../src/DumbExample.h"
 #include "test_temperature_converter.h"
+#include "test_max_min_array.h"
 
 
 void test_AverageThreeBytes_should_AverageMidRangeValues(void)
@@ -23,6 +25,7 @@ void test_AverageThreeBytes_should_AverageHighValues(void)
 
 int main(void)
 {
+
     UNITY_BEGIN();
     RUN_TEST(test_AverageThreeBytes_should_AverageMidRangeValues);
     RUN_TEST(test_AverageThreeBytes_should_AverageHighValues);
@@ -34,5 +37,11 @@ int main(void)
     RUN_TEST(test_celsius_to_kelvin_0C_return_273K);
     RUN_TEST(test_celsius_to_kelvin_10C_return_283K);
     RUN_TEST(test_celsius_to_kelvin_20C_return_293K);
+
+    RUN_TEST(test_max_min_array_emtpy_return_null);
+    RUN_TEST(test_max_min_array_singleItem_return_thatItem);
+    RUN_TEST(test_max_min_array_ascendingArray_return_lastForMax_firstForMin);
+    RUN_TEST(test_max_min_array_descendingArray_return_fisrtForMax_lastForMin);
+
     return UNITY_END();
 }
