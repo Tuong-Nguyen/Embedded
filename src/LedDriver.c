@@ -3,12 +3,15 @@
 //
 
 #include "LedDriver.h"
-static int * ledAddress;
-void LedDriver_Create(uint16_t *address) {
+static uint16_t * ledAddress;
+
+void LedDriver_Create(uint16_t * address) {
     ledAddress = address;
     *ledAddress = 0;
 }
 
 void LedDriver_TurnOn(int ledPosition) {
-    *ledAddress = *ledAddress & 0 | 1;
+    uint16_t i = 1 << ledPosition;
+
+    *ledAddress = *ledAddress | i;
 }
