@@ -14,6 +14,6 @@ include_directories("D:/Projects/Embedded/Libraries/Unity/extras/fixture/src")
 add_library(UNITY "D:/Projects/Embedded/Libraries/Unity/src/unity.c" "D:/Projects/Embedded/Libraries/Unity/extras/fixture/src/unity_fixture.c")
 
 
-add_executable(CTutorialTest test/test_main.c test/test_temperature_converter.c test/test_temperature_converter.h test/test_max_min_array.h test/test_max_min_array.c)
+add_executable(CTutorialTest test/test_main.c test/test_temperature_converter.c test/test_max_min_array.c)
 target_link_libraries (CTutorialTest SOURCE UNITY)
 
