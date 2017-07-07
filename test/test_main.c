@@ -27,6 +27,7 @@ int main(void) {
 
     RUN_TEST_GROUP(max_min_array);
     RUN_TEST_GROUP(sprintf);
+    RUN_TEST_GROUP(LedDriver);
 
     return UNITY_END();
 }

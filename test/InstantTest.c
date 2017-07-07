@@ -8,7 +8,7 @@
 int main(void) {
     UNITY_BEGIN();
 
-    RUN_TEST_GROUP(sprintf);
+    RUN_TEST_GROUP(LedDriver);
 
     UNITY_END();
 }
