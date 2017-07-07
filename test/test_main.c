@@ -26,6 +26,7 @@ int main(void) {
     RUN_TEST_GROUP(temperature_converter);
 
     RUN_TEST_GROUP(max_min_array);
+    RUN_TEST_GROUP(sprintf);
 
     return UNITY_END();
 }
